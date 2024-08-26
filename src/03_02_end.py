@@ -2,12 +2,10 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
+import tensorflow as tf
 from sklearn.datasets import fetch_california_housing
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-
-# TensorFlow imports and model setup
-import tensorflow as tf
 
 # Fetching the California housing dataset
 housing = fetch_california_housing()
