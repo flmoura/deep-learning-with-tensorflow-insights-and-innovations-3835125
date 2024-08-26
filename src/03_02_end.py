@@ -24,7 +24,8 @@ sns.histplot(housing_df['Target'], bins=50, kde=True)
 plt.title('Distribution of House Values')
 plt.xlabel('Median House Value')
 plt.ylabel('Frequency')
-plt.show()
+plt.savefig("output/03_02_distribution_plot.png")
+plt.close()
 
 # Pairplot of the features to understand relationships
 sns.pairplot(housing_df)
