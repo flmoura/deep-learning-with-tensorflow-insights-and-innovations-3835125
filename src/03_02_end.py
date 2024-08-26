@@ -1,4 +1,3 @@
-# 03_02_begin.py
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -6,6 +5,9 @@ import seaborn as sns
 from sklearn.datasets import fetch_california_housing
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+
+# TensorFlow imports and model setup
+import tensorflow as tf
 
 # Fetching the California housing dataset
 housing = fetch_california_housing()
@@ -54,9 +56,6 @@ plt.title('Distribution of Scaled Features')
 plt.xticks(rotation=45)
 plt.savefig('output/03_02_scaled_features_distribution.png')
 plt.close()
-
-# TensorFlow imports and model setup
-import tensorflow as tf
 
 # Initializing a simple sequential model
 model = tf.keras.Sequential([
