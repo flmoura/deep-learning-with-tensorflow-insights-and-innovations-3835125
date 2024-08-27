@@ -35,7 +35,6 @@ plt.xlabel('Epochs')
 plt.ylabel('Loss')
 plt.legend()
 plt.savefig('output/03_03_training_validation_loss.png')
-plt.show()
 
 # Evaluate the model on the test set
 mse_test = model.evaluate(X_test, y_test)
