@@ -26,7 +26,6 @@ housing_df.describe().transpose()
 plt.figure(figsize=(10, 6))
 housing_df.hist(bins=50, figsize=(20, 15))
 plt.tight_layout()
-plt.show()
 
 # Save the distribution plot
 plt.savefig('output/03_04_housing_data_distribution.png')
@@ -76,4 +75,3 @@ plt.legend()
 
 plt.tight_layout()
 plt.savefig('output/03_04_metrics_visualization.png')
-plt.show()
