@@ -43,7 +43,6 @@ def plot_loss(history):
     plt.legend()
     plt.grid(True)
     plt.savefig('output/03_06_loss_plot.png')
-    plt.show()
 
 # Train the autoencoder
 history = autoencoder.fit(X_train, X_train, epochs=20, validation_data=(X_valid, X_valid))
@@ -61,7 +60,6 @@ def plot_reconstruction(model, n=10):
         axs[i].plot(samples[i], label="Original")
         axs[i].plot(reconstructed_samples[i], label="Reconstructed", linestyle='--')
         axs[i].legend()
-    plt.show()
     fig.savefig('output/03_06_reconstruction_plot.png')
 
 plot_reconstruction(autoencoder)
