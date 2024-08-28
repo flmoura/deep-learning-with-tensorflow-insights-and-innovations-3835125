@@ -43,7 +43,6 @@ def plot_loss(history):
     plt.legend()
     plt.grid(True)
     plt.savefig('output/03_06_loss_plot.png')  # Save first
-    plt.show()  # Then show
 
 # Initialize history variable
 history = None
