@@ -15,7 +15,7 @@ X_train = scaler.fit_transform(X_train)
 X_valid = scaler.transform(X_valid)
 X_test = scaler.transform(X_test)
 
-# Build the model
+# Build the model with 2 hidden layers
 model = tf.keras.Sequential([
     tf.keras.layers.Dense(30, activation="relu", input_shape=X_train.shape[1:]),
     tf.keras.layers.Dense(30, activation="relu"),
