@@ -62,7 +62,6 @@ plt.ylabel('RMSE')
 plt.legend()
 
 plt.tight_layout()
-plt.show()
 
 # Save the trained model
 model.save('output/03_05_trained_model.h5')
@@ -89,7 +88,6 @@ plt.title('Original vs Loaded Model Predictions')
 plt.xlabel('Sample Index')
 plt.ylabel('Predicted Value')
 plt.legend()
-plt.show()
 
 # Save this visualization
 plt.savefig('output/03_05_model_comparison.png')
