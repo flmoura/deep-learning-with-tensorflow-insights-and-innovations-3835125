@@ -48,7 +48,6 @@ def plot_loss(history):
     plt.legend()
     plt.grid(True)
     plt.savefig('output/04_01_loss_plot.png')
-    plt.show()
 
 # Plot and save the loss
 plot_loss(history)
