@@ -10,6 +10,7 @@ This is the repository for the LinkedIn Learning course `Deep Learning with Tens
 ## Instructor
 
 Isil Berkun
+
 Data Scientist at Intel Corp.
 
                             
