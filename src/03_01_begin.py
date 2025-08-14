@@ -12,3 +12,15 @@ scaler = StandardScaler()
 X_train = scaler.fit_transform(X_train)
 X_valid = scaler.transform(X_valid)
 X_test = scaler.transform(X_test)
+
+model = tf.keras.Sequential([
+  tf.keras.layers.Dense(30, activation="relu", input_shape=X_train.shape[1:]),
+  tf.keras.layers.Dense(1)
+])
+
+model.compile(loss="mean_squared_error", optimizer="sgd")
+
+history = model.fit(X_train, y_train, epochs=30, validation_data=(X_valid, y_valid))
+
+mse_test = model.evaluate(X_test, y_test)
+print(f"Mean Squared Error on Test Set: {mse_test}")
