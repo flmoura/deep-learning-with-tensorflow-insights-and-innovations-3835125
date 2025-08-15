@@ -24,4 +24,19 @@ model = tf.keras.Sequential([
 # Compile the model
 model.compile(loss="mean_squared_error", optimizer="sgd")
 
-# Placeholder for further steps
+# Train the model
+history = model.fit(X_train, y_train, epochs=20, validation_data=(X_valid, y_valid))
+
+# Visualize the training model
+plt.plot(history.history["loss"], label="Training Loss")
+plt.plot(history.history["val_loss"], label="Validation Loss")
+plt.title("Training and Validation Loss over Epochs")
+plt.xlabel("Epoch")
+plt.ylabel("Loss")
+plt.legend()
+plt.savefig("output/03_03_training_validation_loss.png")
+plt.close()
+
+# Evaluate the model
+mse_test = model.evaluate(X_test, y_test)
+print(f"Mean Squared Error on Test Set: {mse_test}")
